@@ -26,11 +26,11 @@ The following are the requirements for this feature:
 
 ### ~2.2 Open Tickets by Email~
 ~The module should be able to create a new helpdesk ticket when a customer sends an email to a designated email address. 
-The following are the requirements for this feature:
+The following are the requirements for this feature:~
 
-- The module should automatically create a new ticket with the email's subject, body, sender's email address, and attachments.
-- The email parser should be configurable to extract additional information, such as product or priority, from the email.
-- The system should send an automatic acknowledgment email to the sender to confirm receipt of the ticket.~
+- ~The module should automatically create a new ticket with the email's subject, body, sender's email address, and attachments.~
+- ~The email parser should be configurable to extract additional information, such as product or priority, from the email.~
+- ~The system should send an automatic acknowledgment email to the sender to confirm receipt of the ticket.~
 
 ### 2.3 Attach Products to Tickets
 The module should allow users to attach products to a helpdesk ticket. The following are the requirements for this feature:
@@ -39,17 +39,17 @@ The module should allow users to attach products to a helpdesk ticket. The follo
 - The attached products should be visible on the ticket details page.
 - The attached products should be taken into account when generating reports and analytics.
 
-### 2.4 Merge Multiple Tickets
-The module should allow users to merge multiple tickets into a single ticket. 
+### ~2.4 Merge Multiple Tickets~
+~The module should allow users to merge multiple tickets into a single ticket.~
 
 The [TicketMerge module should be used for this functionality](https://github.com/euroblaze/TicketMerge). 
 Minor adaptations might be necessary.
 
-The following are the requirements for this feature:
+~The following are the requirements for this feature:~
 
-- Users should be able to select multiple tickets and merge them into a single surviving_ticket.
-- The merged ticket should contain a consolidated history of all the merged tickets.
-- The original tickets should be marked as 'merged' and linked to the newly created merged ticket.
+- ~Users should be able to select multiple tickets and merge them into a single surviving_ticket.~
+- ~The merged ticket should contain a consolidated history of all the merged tickets.~
+- ~The original tickets should be marked as 'merged' and linked to the newly created merged ticket.~
 
 ### 2.5 Timesheets
 The module should support timesheets for tracking the time spent by support agents on each ticket. 
