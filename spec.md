@@ -1,3 +1,4 @@
+
 # Software Requirements Specification
 
 ## 1. Introduction
@@ -73,3 +74,8 @@ The following are the requirements for this feature:
 - All features outlined in section 2 should be implemented and functional.
 - The enhanced module should be compatible with Odoo v15.+
 - Code must be compliant with [OCA guidelines](https://github.com/OCA/odoo-community.org/blob/master/website/Contribution/CONTRIBUTING.rst).
+
+---
+## After Issues
+
+- https://github.com/euroblaze/Helpdesk/issues/2
