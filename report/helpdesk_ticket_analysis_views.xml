@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_helpdesk_ticket_pivot_inherit" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.report.inherited</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk_mgmt.helpdesk_ticket_views_pivot"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='team_id']" position='after'>
+                <field name="total_hours_spent" widget="timesheet_uom" type="measure"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
