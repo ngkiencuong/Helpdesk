@@ -1,5 +1,5 @@
 
-# Software Requirements Specification
+# Helpdesk Module with Timesheets and Material List
 
 ## 1. Introduction
 This outlines the software requirements specification for enhancing the [OCA Odoo Helpdesk module](https://github.com/OCA/helpdesk). 
