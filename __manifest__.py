@@ -13,6 +13,7 @@
     ],
     'data': [
         'views/helpdesk_ticket.xml',
+        'views/helpdesk_team.xml',
         'report/helpdesk_ticket_analysis_views.xml',
     ],
     'installable': True,
