@@ -10,10 +10,10 @@
             </xpath>
             <xpath expr="//page[@name='description']" position="before">
                 <page string="Products" name="product_ids">
-                    <field name="product_ids" widget="section_and_note_one2many" mode="tree">
+                    <field name="ticket_line_ids" widget="section_and_note_one2many" mode="tree">
                         <tree string="Products" editable="bottom">
-                            <field name="default_code"/>
-                            <field name="name"/>
+                            <field name="product_id"/>
+                            <field name="quantity"/>
                         </tree>
                     </field>
                 </page>

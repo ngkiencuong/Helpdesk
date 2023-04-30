@@ -4,10 +4,10 @@ from odoo import models, fields, api
 class HelpdeskTicket(models.Model):
     _inherit = 'helpdesk.ticket'
 
-    product_ids = fields.Many2many('product.product', string='Products')
     timesheet_ids = fields.One2many('account.analytic.line', 'helpdesk_ticket_id', 'Timesheets')
     total_hours_spent = fields.Float("Spent Hours", compute='_compute_total_hours_spent', default=0, compute_sudo=True, store=True)
     encode_uom_in_days = fields.Boolean(compute='_compute_encode_uom_in_days')
+    ticket_line_ids = fields.One2many('helpdesk.ticket.line', 'ticket_id', 'Ticket Lines')
 
     def _compute_encode_uom_in_days(self):
         self.encode_uom_in_days = self.env.company.timesheet_encode_uom_id == self.env.ref('uom.product_uom_day')
@@ -16,3 +16,12 @@ class HelpdeskTicket(models.Model):
     def _compute_total_hours_spent(self):
         for ticket in self:
             ticket.total_hours_spent = round(sum(ticket.timesheet_ids.mapped('unit_amount')), 2)
+
+
+class HelpdeskTicketLine(models.Model):
+    _name = "helpdesk.ticket.line"
+    _description = "Product in Ticket"
+
+    ticket_id = fields.Many2one('helpdesk.ticket', string='Ticket', ondelete='cascade', index=True)
+    product_id = fields.Many2one('product.product', 'Product', required=True)
+    quantity = fields.Float(string='Quantity', default=1.0)
