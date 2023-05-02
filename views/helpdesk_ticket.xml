@@ -7,6 +7,10 @@
 
             <xpath expr="//field[@name='team_id']" position="before">
                 <field name="encode_uom_in_days" invisible="1"/>
+                <field name="is_prj_connect" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='project_id']" position="attributes">
+                <attribute name="attrs">{'invisible': [('is_prj_connect', '=', False)]}</attribute>
             </xpath>
             <xpath expr="//page[@name='description']" position="before">
                 <page string="Products" name="product_ids">
