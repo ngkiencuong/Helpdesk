@@ -18,6 +18,10 @@ class HelpdeskTicket(models.Model):
         for ticket in self:
             ticket.total_hours_spent = round(sum(ticket.timesheet_ids.mapped('unit_amount')), 2)
 
+    @api.onchange('team_id')
+    def _onchange_project_analytic_account(self):
+        if self.team_id:
+            self.project_id = self.team_id.project_id
 
 
 class HelpdeskTicketLine(models.Model):
@@ -28,7 +32,4 @@ class HelpdeskTicketLine(models.Model):
     product_id = fields.Many2one('product.product', 'Product', required=True)
     quantity = fields.Float(string='Quantity', default=1.0)
 
-    @api.onchange('team_id')
-    def _onchange_project_analytic_account(self):
-        if self.team_id:
-            self.project_id = self.team_id.project_id
+
