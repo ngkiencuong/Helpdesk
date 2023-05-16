@@ -1,0 +1,151 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* Helpdesk
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0-20230210\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-16 13:07+0000\n"
+"PO-Revision-Date: 2023-05-16 13:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: Helpdesk
+#: code:addons/Helpdesk/models/analytic.py:0
+#, python-format
+msgid "A timesheet cannot be linked to a task and a ticket at the same time."
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model,name:Helpdesk.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Kostenstellen-Buchungen"
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket__is_prj_connect
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket_team__is_prj_connect
+msgid "Connected to a Project"
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: Helpdesk
+#: model_terms:ir.ui.view,arch_db:Helpdesk.helpdesk_ticket_view_form_inherit
+msgid "Days Spent"
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket__encode_uom_in_days
+msgid "Encode Uom In Days"
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model,name:Helpdesk.model_helpdesk_ticket
+#: model:ir.model.fields,field_description:Helpdesk.field_account_analytic_line__helpdesk_ticket_id
+msgid "Helpdesk Ticket"
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model,name:Helpdesk.model_helpdesk_ticket_team
+msgid "Helpdesk Ticket Team"
+msgstr "Helpdesk Ticket-Team"
+
+#. module: Helpdesk
+#: model_terms:ir.ui.view,arch_db:Helpdesk.helpdesk_ticket_view_form_inherit
+msgid "Hours Spent"
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket_line__id
+msgid "ID"
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket_line__product_id
+msgid "Product"
+msgstr "Produkte"
+
+#. module: Helpdesk
+#: model:ir.model,name:Helpdesk.model_helpdesk_ticket_line
+msgid "Product in Ticket"
+msgstr ""
+
+#. module: Helpdesk
+#: model_terms:ir.ui.view,arch_db:Helpdesk.helpdesk_ticket_view_form_inherit
+msgid "Products"
+msgstr "Produkte"
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket_team__project_id
+msgid "Project"
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model.fields,help:Helpdesk.field_helpdesk_ticket_team__project_id
+msgid ""
+"Project to which the tickets (and the timesheets) will be linked by default."
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket_line__quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket__total_hours_spent
+msgid "Spent Hours"
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket_line__ticket_id
+msgid "Ticket"
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket__ticket_line_ids
+msgid "Ticket Lines"
+msgstr ""
+
+#. module: Helpdesk
+#: model_terms:ir.ui.view,arch_db:Helpdesk.helpdesk_ticket_view_form_inherit
+msgid "Timesheet Activities"
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket__timesheet_ids
+#: model_terms:ir.ui.view,arch_db:Helpdesk.helpdesk_ticket_view_form_inherit
+msgid "Timesheets"
+msgstr ""

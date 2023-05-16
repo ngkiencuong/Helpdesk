@@ -12,7 +12,7 @@
             <xpath expr="//field[@name='project_id']" position="attributes">
                 <attribute name="attrs">{'invisible': [('is_prj_connect', '=', False)]}</attribute>
             </xpath>
-            <xpath expr="//page[@name='description']" position="before">
+            <xpath expr="//page[@name='description']" position="after">
                 <page string="Products" name="product_ids">
                     <field name="ticket_line_ids" widget="section_and_note_one2many" mode="tree">
                         <tree string="Products" editable="bottom">
