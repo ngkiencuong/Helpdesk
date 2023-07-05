@@ -53,4 +53,21 @@
 
         </field>
     </record>
+
+    <record id="helpdesk_ticket_view_tree_inherit" model="ir.ui.view">
+        <field name="name">helpdesk_ticket_view_tree_inherit</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk_mgmt.ticket_view_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//tree" position="attributes">
+                <attribute name="multi_edit">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='priority']" position="after">
+               <field name="tag_ids" widget="many2many_tags"/>
+            </xpath>
+
+        </field>
+    </record>
 </odoo>
