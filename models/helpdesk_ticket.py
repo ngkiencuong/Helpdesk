@@ -9,6 +9,8 @@ class HelpdeskTicket(models.Model):
     encode_uom_in_days = fields.Boolean(compute='_compute_encode_uom_in_days')
     ticket_line_ids = fields.One2many('helpdesk.ticket.line', 'ticket_id', 'Ticket Lines')
     is_prj_connect = fields.Boolean(related='team_id.is_prj_connect')
+    partner_city = fields.Char('City', related='partner_id.city', store=True)
+    partner_street = fields.Char('Street', related='partner_id.street', store=True)
 
     def _compute_encode_uom_in_days(self):
         self.encode_uom_in_days = self.env.company.timesheet_encode_uom_id == self.env.ref('uom.product_uom_day')
