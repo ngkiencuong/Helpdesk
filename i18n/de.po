@@ -149,3 +149,13 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:Helpdesk.helpdesk_ticket_view_form_inherit
 msgid "Timesheets"
 msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket__partner_city
+msgid "City"
+msgstr ""
+
+#. module: Helpdesk
+#: model:ir.model.fields,field_description:Helpdesk.field_helpdesk_ticket__partner_street
+msgid "Street"
+msgstr ""
