@@ -5,13 +5,13 @@
         <field name="inherit_id" ref="helpdesk_mgmt.ticket_view_form"/>
         <field name="arch" type="xml">
 
-            <xpath expr="//field[@name='team_id']" position="before">
-                <field name="encode_uom_in_days" invisible="1"/>
-                <field name="is_prj_connect" invisible="1"/>
-            </xpath>
-            <xpath expr="//field[@name='project_id']" position="attributes">
-                <attribute name="attrs">{'invisible': [('is_prj_connect', '=', False)]}</attribute>
-            </xpath>
+<!--            <xpath expr="//field[@name='team_id']" position="before">-->
+<!--                <field name="encode_uom_in_days" invisible="1"/>-->
+<!--                <field name="is_prj_connect" invisible="1"/>-->
+<!--            </xpath>-->
+<!--            <xpath expr="//field[@name='project_id']" position="attributes">-->
+<!--                <attribute name="attrs">{'invisible': [('is_prj_connect', '=', False)]}</attribute>-->
+<!--            </xpath>-->
             <xpath expr="//page[@name='description']" position="after">
                 <page string="Products" name="product_ids">
                     <field name="ticket_line_ids" widget="section_and_note_one2many" mode="tree">
@@ -22,34 +22,34 @@
                     </field>
                 </page>
             </xpath>
-            <xpath expr="//page[@name='other_info']" position="after">
-                <page string="Timesheets" name="timesheets"
-                        attrs="{'invisible': [('project_id', '=', False)]}" groups="hr_timesheet.group_hr_timesheet_user">
-                        <field name='timesheet_ids' mode="tree" context="{'default_project_id': project_id}" groups="hr_timesheet.group_hr_timesheet_user">
-                            <tree editable="bottom" string="Timesheet Activities" default_order="date">
-                                <field name="date"/>
-                                <field name="user_id" invisible="1"/>
-                                <field name="employee_id" required="1" widget="many2one_avatar_employee"/>
-                                <field name="name" required="0"/>
-                                <field name="unit_amount" widget="timesheet_uom" decoration-danger="unit_amount &gt; 24"/>
-                                <field name="project_id" invisible="1"/>
-                                <field name="task_id" invisible="1"/>
-                                <field name="company_id" invisible="1"/>
-                            </tree>
-                        </field>
-                        <group>
-                            <group class="oe_subtotal_footer oe_right" name="ticket_hours">
-                                <span>
-                                    <label class="font-weight-bold" for="total_hours_spent" string="Hours Spent"
-                                        attrs="{'invisible': [('encode_uom_in_days', '=', True)]}"/>
-                                    <label class="font-weight-bold" for="total_hours_spent" string="Days Spent"
-                                        attrs="{'invisible': [('encode_uom_in_days', '=', False)]}"/>
-                                </span>
-                                <field name="total_hours_spent" widget="timesheet_uom" nolabel="1" />
-                            </group>
-                        </group>
-                    </page>
-            </xpath>
+<!--            <xpath expr="//page[@name='other_info']" position="after">-->
+<!--                <page string="Timesheets" name="timesheets"-->
+<!--                        attrs="{'invisible': [('project_id', '=', False)]}" groups="hr_timesheet.group_hr_timesheet_user">-->
+<!--                        <field name='timesheet_ids' mode="tree" context="{'default_project_id': project_id}" groups="hr_timesheet.group_hr_timesheet_user">-->
+<!--                            <tree editable="bottom" string="Timesheet Activities" default_order="date">-->
+<!--                                <field name="date"/>-->
+<!--                                <field name="user_id" invisible="1"/>-->
+<!--                                <field name="employee_id" required="1" widget="many2one_avatar_employee"/>-->
+<!--                                <field name="name" required="0"/>-->
+<!--                                <field name="unit_amount" widget="timesheet_uom" decoration-danger="unit_amount &gt; 24"/>-->
+<!--                                <field name="project_id" invisible="1"/>-->
+<!--                                <field name="task_id" invisible="1"/>-->
+<!--                                <field name="company_id" invisible="1"/>-->
+<!--                            </tree>-->
+<!--                        </field>-->
+<!--                        <group>-->
+<!--                            <group class="oe_subtotal_footer oe_right" name="ticket_hours">-->
+<!--                                <span>-->
+<!--                                    <label class="font-weight-bold" for="total_hours_spent" string="Hours Spent"-->
+<!--                                        attrs="{'invisible': [('encode_uom_in_days', '=', True)]}"/>-->
+<!--                                    <label class="font-weight-bold" for="total_hours_spent" string="Days Spent"-->
+<!--                                        attrs="{'invisible': [('encode_uom_in_days', '=', False)]}"/>-->
+<!--                                </span>-->
+<!--                                <field name="total_hours_spent" widget="timesheet_uom" nolabel="1" />-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--            </xpath>-->
 
             <xpath expr="//field[@name='partner_email']" position="after">
                 <field name="partner_city"/>
@@ -81,16 +81,16 @@
         </field>
     </record>
 
-    <record id="helpdesk_ticket_project_view_tree_inherit" model="ir.ui.view">
-        <field name="name">helpdesk_ticket_view_tree_inherit</field>
-        <field name="model">helpdesk.ticket</field>
-        <field name="inherit_id" ref="helpdesk_mgmt_project.ticket_view_tree"/>
-        <field name="arch" type="xml">
+<!--    <record id="helpdesk_ticket_project_view_tree_inherit" model="ir.ui.view">-->
+<!--        <field name="name">helpdesk_ticket_view_tree_inherit</field>-->
+<!--        <field name="model">helpdesk.ticket</field>-->
+<!--        <field name="inherit_id" ref="helpdesk_mgmt_project.ticket_view_tree"/>-->
+<!--        <field name="arch" type="xml">-->
 
-            <xpath expr="//field[@name='project_id']" position="replace">
-                <field name="project_id" optional="show"/>
-            </xpath>
+<!--            <xpath expr="//field[@name='project_id']" position="replace">-->
+<!--                <field name="project_id" optional="show"/>-->
+<!--            </xpath>-->
 
-        </field>
-    </record>
+<!--        </field>-->
+<!--    </record>-->
 </odoo>
